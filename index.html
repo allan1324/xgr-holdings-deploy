@@ -10,28 +10,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="global-nav.css">
 </head>
-<body><a class="skip-link" href="#main">Skip to content</a><div class="grain" aria-hidden="true"></div>
+<body class="with-global-header"><a class="skip-link" href="#main">Skip to content</a><div class="grain" aria-hidden="true"></div>
   <div class="cursor-glow" aria-hidden="true"></div>
   <div class="progress" id="progress" aria-hidden="true"></div>
-  <header class="nav" id="nav">
-  <a class="brand" href="#top" aria-label="XGR Holdings home"><span class="brand-logo-shell"><img class="brand-logo brand-logo-dark" src="assets/xgr-holdings-dark.svg" alt="XGR Holdings"><img class="brand-logo brand-logo-light" src="assets/xgr-holdings-light.svg" alt="" aria-hidden="true"></span></a>
-  <nav class="nav-links" aria-label="Primary navigation"><a href="#about" data-nav="about">About</a><a href="#companies" data-nav="companies">Companies</a><a href="#industries" data-nav="industries">Industries</a><a href="#vision" data-nav="vision">Vision</a></nav>
-  <div class="nav-actions"><a class="nav-contact magnetic" href="#contact">Contact</a><button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="menuPanel"><span>Menu</span><i></i><i></i></button></div>
-</header>
-<div class="menu-panel" id="menuPanel" aria-hidden="true">
-  <div class="menu-ambient" aria-hidden="true"></div>
-  <div class="shell menu-inner">
-    <div class="eyebrow">EXPLORE XGR</div>
-    <div class="menu-grid">
-      <nav class="menu-primary" aria-label="Expanded navigation">
-        <a href="#about"><span>01</span>About the group</a><a href="#companies"><span>02</span>Our companies</a><a href="#industries"><span>03</span>Industries</a><a href="#vision"><span>04</span>Our direction</a><a href="#contact"><span>05</span>Contact</a>
-      </nav>
-      <div class="menu-companies"><p>THE GROUP</p><a href="companies/charlies-winery/">Charlie’s Winery</a><a href="#companies" data-company-jump="1">Xanadu Global Resources</a><a href="#companies" data-company-jump="2">Designated Contractors Limited</a><a href="#companies" data-company-jump="3">XGR Hospitality</a><a href="#companies" data-company-jump="4">XGR Capital</a><a href="#companies" data-company-jump="5">XGRD Foundation</a></div>
-    </div>
-    <div class="menu-footer"><span>Abuja, Nigeria</span><a href="mailto:info@xgr.co">info@xgr.co</a><span>www.xgr.co</span></div>
+  <header class="global-header" id="nav">
+  <div class="global-header__inner">
+    <a class="global-header__logo" href="#top" aria-label="XGR Holdings home"><img src="assets/xgr-holdings-light.svg" alt="XGR Holdings"></a>
+    <nav class="global-header__nav" aria-label="Primary navigation">
+      <details class="global-nav-dropdown"><summary>About Us <i class="global-chevron" aria-hidden="true"></i></summary><div class="global-dropdown-menu"><a href="#about" data-nav="about">About XGR</a><a href="#vision" data-nav="vision">Vision & Philosophy</a></div></details>
+      <details class="global-nav-dropdown"><summary>Our Portfolio <i class="global-chevron" aria-hidden="true"></i></summary><div class="global-dropdown-menu"><a href="#companies" data-nav="companies">Our Companies</a><a href="#industries" data-nav="industries">Industries</a><a href="#model">How the Group Works</a></div></details>
+      <a class="global-nav-link" href="https://xgrdemo.vercel.app/newsroom">Newsroom</a>
+      <a class="global-nav-link" href="#contact" data-nav="contact">Contact</a>
+      <details class="global-language"><summary><span class="global-language__icon" aria-hidden="true">A文</span><span>EN</span><i class="global-chevron" aria-hidden="true"></i></summary><div class="global-dropdown-menu"><span>English</span></div></details>
+    </nav>
+    <details class="company-selector"><summary><span>XGR Holdings</span><i class="global-chevron" aria-hidden="true"></i></summary><div class="global-dropdown-menu"><a href="#top" aria-current="page">XGR Holdings</a><a href="companies/charlies-winery/">Charlie’s Winery</a><a href="#companies">Xanadu Global Resources</a><a href="#companies">Designated Contractors</a><a href="#companies">XGR Hospitality</a><a href="#companies">XGR Capital</a><a href="#companies">XGRD Foundation</a></div></details>
+    <details class="global-mobile-menu"><summary><span>MENU</span><i class="global-chevron" aria-hidden="true"></i></summary><div class="global-mobile-menu__panel"><a href="#about">About Us</a><a href="#companies">Our Portfolio</a><a href="https://xgrdemo.vercel.app/newsroom">Newsroom</a><a href="#contact">Contact</a><p class="global-mobile-current">Switch company</p><a href="#top" aria-current="page">XGR Holdings</a><a href="companies/charlies-winery/">Charlie’s Winery</a><a href="#companies">Xanadu Global Resources</a><a href="#companies">Designated Contractors</a><a href="#companies">XGR Hospitality</a><a href="#companies">XGR Capital</a><a href="#companies">XGRD Foundation</a></div></details>
   </div>
-</div>
+</header>
   <main id="main">
     <section class="hero" id="top" data-section="top">
       <div class="hero-sky" aria-hidden="true"><div class="sun-halo parallax" data-depth="0.025"></div><div class="gold-orbit gold-orbit-a parallax" data-depth="0.045"></div><div class="gold-orbit gold-orbit-b parallax" data-depth="-0.025"></div><div class="cloud cloud-left parallax" data-depth="-0.035"></div><div class="cloud cloud-right parallax" data-depth="0.028"></div><div class="cloud cloud-high cloud-high-a parallax" data-depth="0.014"></div><div class="cloud cloud-high cloud-high-b parallax" data-depth="-0.012"></div><div class="spark-field" id="sparkField"></div></div>
@@ -66,6 +63,7 @@
     <section class="vision-final" id="contact" data-section="contact"><div class="vision-clouds" aria-hidden="true"></div><div class="shell reveal"><div class="eyebrow">OUR DIRECTION</div><h2>Creating value today.<br>Building capacity for what comes next.</h2><p>Developing durable businesses, responsible partnerships and opportunities that contribute to commercial progress and wider social development.</p><div class="closing-actions"><a class="button button-dark magnetic" href="mailto:info@xgr.co">Contact XGR Holdings</a><a class="button button-ghost magnetic" href="#companies">Explore our companies</a></div></div></section>
   </main>
   <footer><div class="shell footer-grid"><a class="footer-brand" href="#top" aria-label="XGR Holdings home"><img src="assets/xgr-holdings-light.svg" alt="XGR Holdings"></a><span>Abuja, Nigeria · info@xgr.co · www.xgr.co</span><span>© 2026</span></div></footer>
+  <script src="global-nav.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
