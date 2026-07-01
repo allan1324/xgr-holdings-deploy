@@ -9,14 +9,6 @@ const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(ent
 document.querySelectorAll('[data-tilt]').forEach(card=>{card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect();const x=e.clientX-r.left,y=e.clientY-r.top;card.style.setProperty('--px',`${x}px`);card.style.setProperty('--py',`${y}px`);const rx=(y/r.height-.5)*-2.2,ry=(x/r.width-.5)*2.2;card.style.transform=`perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg)`});card.addEventListener('pointerleave',()=>card.style.transform='')});
 document.querySelectorAll('.magnetic').forEach(el=>{el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();el.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.12}px,${(e.clientY-r.top-r.height/2)*.12}px)`});el.addEventListener('pointerleave',()=>el.style.transform='')});
 
-const body=document.body;
-const menuButton=document.querySelector('#menuButton');
-const menuPanel=document.querySelector('#menuPanel');
-function setMenu(open){menuButton.setAttribute('aria-expanded',String(open));menuPanel.setAttribute('aria-hidden',String(!open));menuPanel.classList.toggle('is-open',open);body.classList.toggle('menu-open',open);if(open)setTimeout(()=>menuPanel.querySelector('a')?.focus(),160)}
-menuButton.addEventListener('click',()=>setMenu(menuButton.getAttribute('aria-expanded')!=='true'));
-menuPanel.addEventListener('click',event=>{if(event.target.closest('a'))setMenu(false)});
-addEventListener('keydown',event=>{if(event.key==='Escape')setMenu(false)});
-
 const navSectionLinks=[...document.querySelectorAll('[data-nav]')];
 const activeSectionObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){navSectionLinks.forEach(link=>link.classList.toggle('is-active',link.dataset.nav===entry.target.dataset.section))}})},{rootMargin:'-42% 0px -50%',threshold:0});
 document.querySelectorAll('[data-section]').forEach(section=>activeSectionObserver.observe(section));
