@@ -17,3 +17,8 @@
 .stage-core.has-logo{width:188px;height:188px}.stage-logo{display:none;width:138px;max-height:128px;object-fit:contain;object-position:center;filter:drop-shadow(0 10px 24px rgba(0,0,0,.28))}.stage-core.has-logo .stage-logo{display:block}.stage-core.has-logo #stageMonogram{display:none}
 @media(max-width:980px){.brand{width:158px;min-width:158px}.brand-logo-shell{width:158px;height:46px}.stage-core.has-logo{width:168px;height:168px}.stage-logo{width:124px}}
 @media(max-width:640px){.brand{width:136px;min-width:136px}.brand-logo-shell{width:136px;height:42px}.hero-brand-logo{width:min(225px,58vw);margin-bottom:24px}.footer-brand img{width:145px}.footer-grid{align-items:flex-start}.stage-core.has-logo{width:150px;height:150px}.stage-logo{width:110px}}
+
+
+/* Clickable company page rows */
+.company-tab[data-page]{padding-right:112px}.company-tab[data-page]::after{content:"VIEW PAGE ↗";position:absolute;right:22px;top:50%;z-index:2;color:var(--gold2);font-size:8px;font-weight:600;letter-spacing:.14em;opacity:.46;transform:translateY(-50%);transition:opacity .25s ease,transform .25s ease}.company-tab[data-page]:hover::after,.company-tab[data-page]:focus-visible::after{opacity:1;transform:translate(3px,-50%)}
+@media(max-width:640px){.company-tab[data-page]{padding-right:54px}.company-tab[data-page]::after{content:"↗";right:18px;font-size:16px;letter-spacing:0}}
