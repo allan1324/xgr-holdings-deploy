@@ -896,3 +896,34 @@
 .xgrBrand{display:none}.charlieBrand{display:flex;align-items:center;width:158px;height:58px}.charlieBrand img{width:100%;height:100%;object-fit:contain;object-position:left center}.groupBrand{justify-self:end;display:flex;align-items:center;gap:12px;opacity:.78;transition:opacity .25s ease}.groupBrand:hover{opacity:1}.groupBrand span{font-size:8px;font-weight:600;letter-spacing:.18em;color:var(--cw-gold-light)}.groupBrand img{display:block;width:118px;height:auto}.heroLogo{width:min(300px,62vw);margin-left:0;filter:drop-shadow(0 14px 34px rgba(0,0,0,.22))}.bottleBody img{width:80%}.contactLogo img{width:min(380px,90%)}.portfolioLogo{width:min(210px,48vw);height:auto;margin:0 0 30px;object-fit:contain;object-position:left center}
 @media(max-width:780px){.charlieBrand{width:132px;height:50px}.groupBrand span{display:none}.groupBrand img{width:92px}.heroLogo{width:min(260px,68vw)}.portfolioLogo{width:180px}}
 @media(max-width:520px){.charlieBrand{width:112px;height:46px}.groupBrand img{width:78px}.heroLogo{width:220px}.contactLogo img{width:min(300px,92%)}}
+
+
+/* Real Seven Brothers hero bottle */
+.heroBottleReal {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: min(286px, 23vw);
+  height: auto;
+  max-height: 590px;
+  object-fit: contain;
+  filter: drop-shadow(0 42px 68px rgba(0,0,0,.48));
+  animation: bottleFloat 7s ease-in-out infinite alternate;
+  transform-origin: 50% 70%;
+}
+
+@media (max-width: 1100px) {
+  .heroBottleReal { width: min(270px, 38vw); }
+}
+
+@media (max-width: 780px) {
+  .heroBottleReal { width: min(250px, 58vw); max-height: 500px; }
+}
+
+@media (max-width: 520px) {
+  .heroBottleReal { width: 210px; max-height: 420px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroBottleReal { animation: none; }
+}
