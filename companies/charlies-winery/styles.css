@@ -907,7 +907,7 @@
   height: auto;
   max-height: 590px;
   object-fit: contain;
-  filter: drop-shadow(0 42px 68px rgba(0,0,0,.48));
+  filter: drop-shadow(0 42px 68px rgba(0,0,0,.48)) contrast(1.04) saturate(1.02);
   animation: bottleFloat 7s ease-in-out infinite alternate;
   transform-origin: 50% 70%;
 }
